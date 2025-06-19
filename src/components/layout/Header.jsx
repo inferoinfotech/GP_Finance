@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LayoutGrid } from "lucide-react";
+import Link from "next/link";
 import SidebarModal from "../model/sidebar-modal";
 
 export default function Header() {
@@ -33,13 +34,17 @@ export default function Header() {
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-12">
-              {["Home", "About Us", "Services", "Contact"].map((text, i) => (
-                <span
-                  key={i}
-                  className="cursor-pointer font-medium text-[16px] text-gray-800 hover:text-blue-600 transition-colors"
-                >
-                  {text}
-                </span>
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Services", path: "/services" },
+                { name: "Contact", path: "/contact" },
+              ].map((item, i) => (
+                <Link key={i} href={item.path} passHref>
+                  <span className="cursor-pointer font-medium text-[16px] text-gray-800 hover:text-blue-600 transition-colors">
+                    {item.name}
+                  </span>
+                </Link>
               ))}
             </nav>
 
@@ -55,9 +60,11 @@ export default function Header() {
               </button>
 
               {/* Contact Button */}
-              <button className="bg-[#2974FF] hidden xl:block text-white px-8 py-3.5 rounded-full font-semibold transition-colors hover:bg-blue-700">
-                Contact Now
-              </button>
+              <Link href="/contact">
+                <button className="bg-[#2974FF] hidden xl:block text-white px-8 py-3.5 rounded-full font-semibold transition-colors hover:bg-blue-700">
+                  Contact Now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
