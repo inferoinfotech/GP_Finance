@@ -1,11 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { X, Phone, Mail, MapPin, Search } from "lucide-react";
+import { X, Phone, Mail, MapPin, Search, Facebook, Twitter, Globe, } from "lucide-react";
 
 export default function SidebarModal({ isOpen, onClose }) {
     const [visible, setVisible] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const socialLinks = [
+        { icon: <Facebook className="w-4 h-4 md:w-5 md:h-5" />, href: "https://facebook.com" },
+        { icon: <Twitter className="w-4 h-4 md:w-5 md:h-5" />, href: "https://twitter.com" },
+        { icon: <Globe className="w-4 h-4 md:w-5 md:h-5" />, href: "https://yourwebsite.com" },
+    ];
 
     useEffect(() => {
         setMounted(true);
@@ -80,13 +85,15 @@ export default function SidebarModal({ isOpen, onClose }) {
                         <div className="xl:order-2 block xl:hidden">
                             <h6 className="text-white font-semibold text-sm mb-3">Follow Us</h6>
                             <div className="flex gap-2">
-                                {["f", "t", "Be", "in", "▶"].map((item, index) => (
+                                {socialLinks.map((item, index) => (
                                     <a
                                         key={index}
-                                        href="#"
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-8 h-8 md:w-10 md:h-10 bg-[#1E1F21] text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all"
                                     >
-                                        <span className="text-xs md:text-sm font-bold">{item}</span>
+                                        {item.icon}
                                     </a>
                                 ))}
                             </div>
@@ -167,13 +174,14 @@ export default function SidebarModal({ isOpen, onClose }) {
                     <div className="hidden xl:block">
                         <h6 className="text-white font-semibold text-sm mb-3">Follow Us</h6>
                         <div className="flex gap-2">
-                            {["f", "t", "Be", "in", "▶"].map((item, index) => (
+                            {socialLinks.map((item, index) => (
                                 <a
                                     key={index}
-                                    href="#"
-                                    className="w-8 h-8 md:w-10 md:h-10 bg-[#1E1F21] text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all"
-                                >
-                                    <span className="text-xs md:text-sm font-bold">{item}</span>
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-8 h-8 md:w-10 md:h-10 bg-[#1E1F21] text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                                    {item.icon}
                                 </a>
                             ))}
                         </div>

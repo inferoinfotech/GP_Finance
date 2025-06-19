@@ -20,16 +20,16 @@ export default function Footer() {
           <div className="space-y-6">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#2974FF] rounded-full flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
+                  <div className="w-4 h-4 bg-[#2974FF] rounded-full"></div>
                 </div>
               </div>
               <span className="text-2xl font-bold">Noxiy</span>
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-[#999999] text-[16px] leading-relaxed mt-[13px]">
               Proin vitae massa neque. Sed eget urna lacinia, ultrices odio non,
             </p>
 
@@ -90,7 +90,7 @@ export default function Footer() {
 
             {/* Address */}
             <div className="flex items-start gap-3 mb-6">
-              <div className="w-6 h-6 text-red-500 flex-shrink-0 mt-1">
+              <div className="w-6 h-6 text-[#2974FF] flex-shrink-0 mt-1">
                 <MapPin className="w-5 h-5" />
               </div>
               <p className="text-gray-400 text-sm">4140 Parker Rd. Allentown, New Mexico 31134</p>
@@ -99,7 +99,7 @@ export default function Footer() {
             {/* Working Hours */}
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-6 h-6 text-red-500 flex-shrink-0">
+                <div className="w-6 h-6 text-[#2974FF] flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
                 <h4 className="text-white font-medium">Working Hours :</h4>
@@ -134,8 +134,8 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-12 pt-6">
           <p className="text-center text-gray-400 text-sm">
-            Copyright 2023 <span className="text-red-500 font-medium">Noxiy</span> - All Rights Reserved By{" "}
-            <span className="text-red-500 font-medium">ThemeOri</span>
+            Copyright 2023 <span className="text-[#2974FF] font-medium">Noxiy</span> - All Rights Reserved By{" "}
+            <span className="text-[#2974FF] font-medium">ThemeOri</span>
           </p>
         </div>
       </div>
