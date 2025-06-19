@@ -19,7 +19,7 @@ export default function Header() {
     <>
       {/* Header */}
       <header className="bg-white shadow-sm">
-        <div className="mx-auto max-w-container px-5">
+        <div className="w-full max-w-container 2xl:px-8 xl:px-6 lg:px-5 md:px-4 sm:px-4 px-3 mx-auto">
           <div className="flex items-center justify-between py-5">
             {/* Logo */}
             <div className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export default function Header() {
               </button>
 
               {/* Contact Button */}
-              <button className="bg-[#2974FF] text-white px-8 py-3.5 rounded-full font-semibold transition-colors hover:bg-blue-700">
+              <button className="bg-[#2974FF] hidden xl:block text-white px-8 py-3.5 rounded-full font-semibold transition-colors hover:bg-blue-700">
                 Contact Now
               </button>
             </div>
