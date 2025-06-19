@@ -1,4 +1,4 @@
-import { MapPin, Clock } from "lucide-react"
+import { MapPin, Clock, Facebook, Twitter, Globe } from "lucide-react"
 
 export default function Footer() {
   const galleryImages = [
@@ -42,28 +42,21 @@ export default function Footer() {
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                   aria-label="Facebook"
                 >
-                  <span className="text-white font-bold text-sm">f</span>
+                  <Facebook className="w-6 h-6"/>
                 </a>
                 <a
                   href="#"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                   aria-label="Twitter"
                 >
-                  <span className="text-white font-bold text-sm">t</span>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label="Behance"
-                >
-                  <span className="text-white font-bold text-xs">Be</span>
+                  <Twitter className="w-6 h-6" />
                 </a>
                 <a
                   href="#"
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
                   aria-label="Website"
                 >
-                  <span className="text-white font-bold text-sm">🌐</span>
+                  <Globe className="w-6 h-6"/>
                 </a>
               </div>
             </div>
