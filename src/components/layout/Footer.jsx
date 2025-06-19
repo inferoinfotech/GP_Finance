@@ -35,7 +35,7 @@ export default function Footer() {
 
             {/* Social Media */}
             <div>
-              <h6 className="text-white font-medium mb-4">Follow Us :</h6>
+              <h6 className="text-white font-medium text-[18px] mb-4">Follow Us :</h6>
               <div className="flex gap-3">
                 <a
                   href="#"
@@ -71,11 +71,11 @@ export default function Footer() {
 
           {/* Main Pages Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Main Pages</h3>
+            <h3 className="text-2xl font-semibold mb-6">Main Pages</h3>
             <ul className="space-y-3">
               {mainPages.map((page, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm flex items-center">
+                  <a href="#" className="text-[#999999] hover:text-white transition-colors text-[16px] flex items-center">
                     <span className="w-2 h-2 bg-gray-600 rounded-full mr-3 flex-shrink-0"></span>
                     {page}
                   </a>
@@ -86,27 +86,27 @@ export default function Footer() {
 
           {/* Official Info Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Official Info</h3>
+            <h3 className="text-2xl font-semibold mb-6">Official Info</h3>
 
             {/* Address */}
-            <div className="flex items-start gap-3 mb-6">
-              <div className="w-6 h-6 text-[#2974FF] flex-shrink-0 mt-1">
+            <div className="flex items-start gap-3  border-b border-[#333334] pb-[18px] mb-[18px]">
+              <div className="w-10 h-10 text-[#2974FF] flex-shrink-0 mt-1 border rounded-full border-[#333334] flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
-              <p className="text-gray-400 text-sm">4140 Parker Rd. Allentown, New Mexico 31134</p>
+              <p className="text-gray-400 text-[16px]">4140 Parker Rd. Allentown, New Mexico 31134</p>
             </div>
 
             {/* Working Hours */}
             <div>
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-6 h-6 text-[#2974FF] flex-shrink-0">
+              <div className="flex items-center gap-3 mb-3 ">
+                <div className="w-10 h-10 text-[#2974FF] border rounded-full border-[#333334] flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
-                <h4 className="text-white font-medium">Working Hours :</h4>
+                <h4 className="text-white text-[18px] font-medium">Working Hours :</h4>
               </div>
               <div className="ml-9 space-y-1">
-                <p className="text-gray-400 text-sm">Monday - Friday 9: AM- 5: PM</p>
-                <p className="text-gray-400 text-sm">Sat - Sun Closed</p>
+                <p className="text-gray-400 text-[16px]">Monday - Friday 9: AM- 5: PM</p>
+                <p className="text-gray-400 text-[16px]">Sat - Sun Closed</p>
               </div>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Footer() {
               {galleryImages.map((image, index) => (
                 <div
                   key={index}
-                  className="aspect-square bg-gray-700 rounded-lg overflow-hidden hover:opacity-80 transition-opacity cursor-pointer"
+                  className="aspect-square bg-gray-700 overflow-hidden hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <img
                     src={image || "/placeholder.svg"}
