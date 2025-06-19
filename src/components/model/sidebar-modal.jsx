@@ -2,10 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { X, Phone, Mail, MapPin, Search, Facebook, Twitter, Globe, } from "lucide-react";
+import Link from 'next/link';
+
 
 export default function SidebarModal({ isOpen, onClose }) {
     const [visible, setVisible] = useState(false);
     const [mounted, setMounted] = useState(false);
+
+    const navItems = [
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about" },
+        { label: "Services", href: "/services" },
+        { label: "Contact", href: "/contact" }
+    ];
     const socialLinks = [
         { icon: <Facebook className="w-4 h-4 md:w-5 md:h-5" />, href: "https://facebook.com" },
         { icon: <Twitter className="w-4 h-4 md:w-5 md:h-5" />, href: "https://twitter.com" },
@@ -70,14 +79,15 @@ export default function SidebarModal({ isOpen, onClose }) {
 
                             {/* Navigation */}
                             <nav className="mb-8 block xl:hidden">
-                                {["Home", "About Us", "Services", "Contact"].map((item, index) => (
-                                    <a
+                                {navItems.map((item, index) => (
+                                    <Link
                                         key={index}
-                                        href="#"
+                                        href={item.href}
+                                        onClick={onClose}
                                         className="block text-white text-[26px] font-semibold py-4 border-b border-[#1E1F21] hover:text-blue-400 transition-all duration-300"
                                     >
-                                        {item}
-                                    </a>
+                                        {item.label}
+                                    </Link>
                                 ))}
                             </nav>
                         </div>
