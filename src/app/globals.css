@@ -191,3 +191,29 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+
+
+/* About Us  */
+
+@keyframes waveFloat {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+}
+
+.animate-waveFloat {
+  animation: waveFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-upDown {
+  animation: upDown 3s ease-in-out infinite;
+}
