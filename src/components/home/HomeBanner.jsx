@@ -77,12 +77,12 @@ const HomeBanner = () => {
         <img
           src="../images/banner-2.png"
           alt="Decorative Bounce"
-          className="absolute bottom-20 left-8 w-32 h-32  rounded-full animate-[spin_3s_linear_infinite]"
+          className="absolute bottom-2 left-8 w-32 h-32  rounded-full animate-[spin_3s_linear_infinite]"
           style={{ animationDuration: "3s" }}
         />
 
         {/* Bottom Right Dots Grid */}
-        <div className="absolute bottom-12 right-8 w-28 h-24">
+        <div className="absolute bottom-8 right-8 w-28 h-24">
           <img
             src="../images/banners-2.png"
             alt=""
@@ -91,98 +91,98 @@ const HomeBanner = () => {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-[1440px] px-4 relative z-10">
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
-          spaceBetween={0}
-          slidesPerView={1}
-          effect="fade"
-          fadeEffect={{ crossFade: true }}
-          navigation={{
-            prevEl: ".hero-button-prev",
-            nextEl: ".hero-button-next",
-          }}
-          pagination={{
-            clickable: true,
-            bulletClass: "hero-pagination-bullet",
-            bulletActiveClass: "hero-pagination-bullet-active",
-          }}
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          speed={1000}
-          className="hero-swiper"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={slide.id}>
-              <div className="h-fit flex items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full pt-28">
-                  {/* Left Content */}
-                  <div className="space-y-8 order-2 lg:order-1">
-                    {/* Badge with Animation */}
-                    <div className="inline-flex items-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                      <span className="bg-blue-100 text-[#2974FF] px-6 py-3 rounded-full text-[16px] font-medium flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#2974FF] rounded-full animate-pulse" />
-                        {slide.badge}
-                      </span>
+      <div className=" mx-auto max-w-container px-4 relative z-10">
+      
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay, EffectFade]}
+            spaceBetween={0}
+            slidesPerView={1}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            navigation={{
+              prevEl: ".hero-button-prev",
+              nextEl: ".hero-button-next",
+            }}
+            pagination={{
+              clickable: true,
+              bulletClass: "hero-pagination-bullet",
+              bulletActiveClass: "hero-pagination-bullet-active",
+            }}
+            autoplay={{
+              delay: 6000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            speed={1000}
+            className="hero-swiper"
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide key={slide.id}>
+                <div className="h-fit flex items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full pt-28">
+                    {/* Left Content */}
+                    <div className="space-y-8 order-2 lg:order-1">
+                      {/* Badge with Animation */}
+                      <div className="inline-flex items-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                        <span className="bg-blue-100 text-[#2974FF] px-6 py-3 rounded-full text-[16px] font-medium flex items-center gap-2">
+                          <div className="w-2 h-2 bg-[#2974FF] rounded-full animate-pulse" />
+                          {slide.badge}
+                        </span>
+                      </div>
+
+                      {/* Title with Animation */}
+                      <h1
+                        className="text-4xl lg:text-5xl xl:text-[90px] font-bold text-gray-900 leading-tighter animate-fade-in-up"
+                        style={{ animationDelay: "0.4s" }}
+                      >
+                        {slide.title}
+                      </h1>
+
+                      {/* Description with Animation */}
+                      <p
+                        className="text-gray-600 text-lg lg:text-xl leading-relaxed max-w-lg animate-fade-in-up"
+                        style={{ animationDelay: "0.6s" }}
+                      >
+                        {slide.description}
+                      </p>
+
+                      {/* Buttons with Animation */}
+                      <div className="flex items-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+                        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                          {slide.buttonText}
+                        </button>
+                        <button className="w-16 h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
+                          <Play className="w-6 h-6 ml-1 group-hover:scale-110 transition-transform" fill="currentColor" />
+                        </button>
+                      </div>
                     </div>
 
-                    {/* Title with Animation */}
-                    <h1
-                      className="text-4xl lg:text-5xl xl:text-[90px] font-bold text-gray-900 leading-tighter animate-fade-in-up"
-                      style={{ animationDelay: "0.4s" }}
-                    >
-                      {slide.title}
-                    </h1>
-
-                    {/* Description with Animation */}
-                    <p
-                      className="text-gray-600 text-lg lg:text-xl leading-relaxed max-w-lg animate-fade-in-up"
-                      style={{ animationDelay: "0.6s" }}
-                    >
-                      {slide.description}
-                    </p>
-
-                    {/* Buttons with Animation */}
-                    <div className="flex items-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-                      <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                        {slide.buttonText}
-                      </button>
-                      <button className="w-16 h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
-                        <Play className="w-6 h-6 ml-1 group-hover:scale-110 transition-transform" fill="currentColor" />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Right Image */}
-                  <div className="relative order-1 lg:order-2 hidden lg:block">
-                    <div className="relative animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
-                      <img
-                        src={slide.image || "/placeholder.svg"}
-                        alt={`Hero slide ${slide.id}`}
-                        className="transform transition-transform duration-700"
-                      />
+                    {/* Right Image */}
+                    <div className="relative order-1 lg:order-2 hidden lg:block mx-auto">
+                      <div className="relative animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
+                        <img
+                          src={slide.image || "/placeholder.svg"}
+                          alt={`Hero slide ${slide.id}`}
+                          className="transform transition-transform duration-700"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        {/* Custom Navigation Buttons */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 flex flex-col gap-4">
-          <button className="hero-button-prev w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
-            <MoveRight className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
-          </button>
-          <button className="hero-button-next w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
-            <MoveLeft className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
-          </button>
-        </div>
+          {/* Custom Navigation Buttons */}
       </div>
-
+      <div className="absolute right-36 top-1/2 transform -translate-y-1/2 z-20 flex flex-col gap-4">
+        <button className="hero-button-prev w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
+          <MoveRight className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
+        </button>
+        <button className="hero-button-next w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
+          <MoveLeft className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
+        </button>
+      </div>
 
       {/* Custom Styles */}
       <style jsx global>{`
