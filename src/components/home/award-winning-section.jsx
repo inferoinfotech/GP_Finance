@@ -8,15 +8,15 @@ export default function AwardWinningSection() {
           {/* Left Side - Image */}
           <div className="relative">
             {/* Main Image */}
-            <div className="relative rounded-2xl overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
-                src="/placeholder.svg?height=400&width=600"
+                src="../images/about-3.jpg"
                 alt="Professional insurance consultation"
                 className="w-full h-[400px] object-cover"
               />
 
               {/* Blue Overlay Box */}
-              <div className="absolute bottom-6 left-6 bg-blue-600 text-white p-6 rounded-xl shadow-lg">
+              <div className="absolute bottom-1 left-6 bg-blue-600 text-white p-6 rounded-xl shadow-lg">
                 <div className="text-4xl font-bold mb-1">25+</div>
                 <div className="text-sm">
                   <div>Years Experience</div>
@@ -67,9 +67,9 @@ export default function AwardWinningSection() {
               </button>
 
               {/* Award Stats */}
-              <div className="text-right">
-                <div className="text-5xl font-bold text-gray-900 mb-1">194+</div>
-                <div className="text-gray-600 text-sm">
+              <div className="text-right relative bg-[#f8f8f8] rounded-xl  px-6 w-40 h-40 shadow-sm border-t-4 border-[#2974FF]">
+                <div className="text-4xl font-bold text-black mt-4 ">194+</div>
+                <div className="mt-2 text-gray-800 font-medium leading-tight">
                   <div>Get International</div>
                   <div>Award</div>
                 </div>
