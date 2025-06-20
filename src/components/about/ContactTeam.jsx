@@ -4,13 +4,8 @@ import Link from "next/link";
 
 function ContactTeam() {
   return (
-    <div
-      className="relative bg-fixed bg-center bg-no-repeat bg-cover section-padding"
-      style={{ backgroundImage: "url('/assets/img/pages/video.jpg')" }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/85 z-0"></div>
-
+    <div className="bg-gray-900 w-full">
+      {/* Content Container */}
       <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left Content */}
@@ -18,7 +13,7 @@ function ContactTeam() {
             <span className="relative pl-6 text-[16px] font-semibold text-blue-600 uppercase tracking-wider before:content-[''] before:absolute before:top-[-2px] before:left-0 before:w-[20px] before:h-[22px] before:bg-no-repeat before:bg-[length:19px] before:bg-[url('/images/subtitle-4.png')]">
               Need a help?
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold leading-tight max-w-xl">
+            <h2 className="text-[32px] sm:text-4xl font-bold leading-tight max-w-xl mt-3">
               Connect with Our Team for Assistance
             </h2>
             <Link
@@ -26,7 +21,7 @@ function ContactTeam() {
               className="relative inline-block mt-8 px-6 py-3 text-white font-semibold bg-blue-600 rounded-lg overflow-hidden group"
             >
               <span className="absolute inset-0 bg-black scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-100 z-0"></span>
-              <span className="relative z-10">Our Team</span>
+              <span className="relative z-10 text-[16px]">Our Team</span>
             </Link>
           </div>
 

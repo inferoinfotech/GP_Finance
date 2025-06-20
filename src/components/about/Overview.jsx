@@ -105,7 +105,7 @@ function Page() {
                   >
                     <span className="absolute inset-0 bg-black scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-100 z-0"></span>
 
-                    <span className="relative z-10">Discover More</span>
+                    <span className="relative z-10 text-[16px]">Discover More</span>
                   </Link>
                   <div className="flex items-center gap-4">
                     <img
