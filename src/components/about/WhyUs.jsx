@@ -46,12 +46,8 @@ function WhyUs() {
               </div>
             </div>
 
-            <Link
-              href="/your-target-page"
-              className="relative inline-block px-6 py-3 text-white font-semibold bg-blue-600 rounded-lg overflow-hidden group"
-            >
-              <span className="absolute inset-0 bg-black scale-x-0 origin-center transition-transform duration-300 ease-in-out group-hover:scale-x-100 z-0"></span>
-              <span className="relative z-10 text-[16px]">Discover More</span>
+            <Link href="/your-target-page" className="link-button">
+              Discover More
             </Link>
           </div>
 

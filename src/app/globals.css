@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -44,6 +44,12 @@
 }
 
 :root {
+  --primary-color-1: #b49132;
+  --primary-color-2: #fff;
+  --primary-color-3: #373c5f;
+  --primary-color-4: #999999;
+  --primary-color-5: #464646;
+  --small-word: #7d7d7d;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -77,7 +83,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
-
+/* 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -110,6 +116,83 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+} */
+
+.text-primary-1 {
+  color: var(--primary-color-1);
+}
+.text-primary-2 {
+  color: var(--primary-color-2);
+}
+.text-primary-3 {
+  color: var(--primary-color-3);
+}
+.text-line-4 {
+  color: var(--primary-color-4);
+}
+.text-para-5 {
+  color: var(--primary-color-5);
+}
+.text-small-color {
+  color: var(--small-word);
+}
+
+.bg-primary-1 {
+  background-color: var(--primary-color-1);
+}
+.bg-primary-2 {
+  background-color: var(--primary-color-2);
+}
+.bg-primary-3 {
+  background-color: var(--primary-color-3);
+}
+.bg-primary-4 {
+  background-color: var(--primary-color-4);
+}
+.bg-primary-5 {
+  background-color: var(--primary-color-5);
+}
+
+.border-primary-1 {
+  border-color: var(--primary-color-1);
+}
+.border-primary-2 {
+  border-color: var(--primary-color-2);
+}
+.border-primary-3 {
+  border-color: var(--primary-color-3);
+}
+.border-primary-4 {
+  border-color: var(--primary-color-4);
+}
+.border-primary-5 {
+  border-color: var(--primary-color-5);
+}
+
+/* common link button  */
+
+.link-button,
+.link-button-2 {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid var(--primary-color-1);
+  color: var(--primary-color-2);
+  background-color: var(--primary-color-1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  background-color: var(--primary-color-2);
+  color: var(--primary-color-1);
+}
+
+.link-button-2:hover {
+  background-color: var(--primary-color-3);
+  color: var(--primary-color-2);
+  border: 2px solid var(--primary-color-2);
 }
 
 @layer base {
@@ -127,7 +210,7 @@
 }
 
 .bg-primary {
-  background: #2974FF;
+  background: #2974ff;
 }
 
 .hero-swiper .swiper-pagination {
@@ -156,7 +239,6 @@
 }
 
 @keyframes upDown {
-
   0%,
   100% {
     transform: translate3d(0, 0, 0);
@@ -192,12 +274,11 @@
   animation-timing-function: linear;
 }
 
-
-
 /* About Us  */
 
 @keyframes waveFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -209,11 +290,30 @@
   animation: waveFloat 3s ease-in-out infinite;
 }
 
-
 @keyframes upDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .animate-upDown {
   animation: upDown 3s ease-in-out infinite;
+}
+
+/* --Our team  */
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 40s linear infinite;
 }
