@@ -59,12 +59,12 @@ export default function InsuranceSolutions() {
     }
     return (
         <section>
-            <div className="min-h-screen py-24">
+            <div className="py-24">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1320px] mx-auto">
                     {cardData.map((item, index) => (
                         <Card
                             key={index}
-                            className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white" >
+                            className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-primary-2" >
                             {/* Background pattern */}
                             <div className="absolute inset-0 opacity-5">
                                 <div
@@ -100,30 +100,6 @@ export default function InsuranceSolutions() {
                                     {item.description}
                                 </CardDescription>
                             </CardHeader>
-
-                            <CardContent className="relative z-10">
-                                <div className="space-y-4">
-                                    {item.stats.map((stat, i) => (
-                                        <div key={i} className="space-y-2">
-                                            <div className="flex justify-between text-sm">
-                                                <span className="font-medium text-gray-700">{stat.label}</span>
-                                                <span className="text-gray-500">{stat.value}%</span>
-                                            </div>
-                                            <div className="w-full bg-gray-200 rounded-full h-2">
-                                                <div
-                                                    className="h-2 rounded-full transition-all duration-1000 ease-out"
-                                                    style={{
-                                                        backgroundColor: "#2974FF",
-                                                        width: `${stat.value}%`,
-                                                        boxShadow: `0 0 10px rgba(41, 116, 255, 0.3)`,
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </CardContent>
-
                             <CardFooter className="relative z-10 pt-6">
                                 <Button
                                     variant="outline"

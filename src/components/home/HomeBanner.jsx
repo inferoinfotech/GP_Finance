@@ -1,259 +1,188 @@
-"use client"
+"use client";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules"
-import { Play, ChevronLeft, ChevronRight, MoveRight, MoveLeft } from "lucide-react"
-import { useEffect, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
+import { Play, ChevronLeft, ChevronRight, MoveRight, MoveLeft } from "lucide-react";
+import { useEffect, useState } from "react";
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/effect-fade"
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 const HomeBanner = () => {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
   const slides = [
     {
       id: 1,
-      badge: "Best Insurance Agency",
-      title: "Secure Your Business Future.",
+      badge: "Financial Excellence",
+      title: "Secure Your Financial Future",
       description:
-        "Choose us for comprehensive insurance coverage that safeguards what Matters most, personalized to your unique needs.",
-      buttonText: "Discover More",
-      image: "../images/banner-4.png",
+        "Expert guidance for wealth preservation and growth. Let our 20+ years of experience work for you.",
+      buttonText: "Get Started",
+      image: "../images/banner/banner-1.jpg",
     },
     {
       id: 2,
-      badge: "Trusted Protection",
-      title: "Protect What Matters Most.",
+      badge: "Strategic Planning",
+      title: "Optimize Your Investments",
       description:
-        "Experience peace of mind with our tailored insurance solutions designed to protect your family and business assets.",
+        "Tailored strategies to maximize returns while minimizing risks. Your financial security is our priority.",
       buttonText: "Learn More",
-      image: "../images/banner-4.png",
+      image: "../images/banner/banner-2.jpg",
     },
     {
       id: 3,
-      badge: "Expert Coverage",
-      title: "Insurance Made Simple.",
+      badge: "Trusted Advisors",
+      title: "Comprehensive Wealth Management",
       description:
-        "Get the coverage you need with our expert guidance and personalized service that puts your needs first.",
-      buttonText: "Get Started",
-      image: "../images/banner-4.png",
+        "Holistic solutions for retirement, taxation, and asset protection. Your success is our benchmark.",
+      buttonText: "Schedule Consultation",
+      image: "../images/banner/banner-3.jpg",
     },
-  ]
+  ];
 
-  if (!mounted) return null
+  if (!mounted) return null;
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Top Left Dots */}
-        <div className="absolute top-0 left-0 md:w-48 md:h-52 w-32 h-36">
-          <img
-            src="../images/banners-3.png"
-            alt="Floating"
-            className="object-contain animate-upDown"
-          />
-        </div>
-
-        {/* Top Right Waves */}
-        <div className="absolute md:top-12 md:right-12 top-12 right-6 w-40 h-8">
-          <img
-            src="../images/banner-3.png"
-            alt="Decorative Wave"
-            className="object-contain animate-leftRight"
-          />
-        </div>
-
-        {/* Bottom Left Circle */}
-        <img
-          src="../images/banner-2.png"
-          alt="Decorative Bounce"
-          className="absolute md:bottom-8 md:left-8 bottom-1 left-4 lg:bottom-0 lg:left-4 xl:bottom-8 xl:left-8 md:w-32 md:h-32 w-24 h-24  rounded-full animate-[spin_3s_linear_infinite]"
-          style={{ animationDuration: "3s" }}
-        />
-
-        {/* Bottom Right Dots Grid */}
-        <div className="absolute bottom-8 md:right-8 right-0 w-28 h-24">
-          <img
-            src="../images/banners-2.png"
-            alt=""
-            className=" object-contain animate-upDown z-20"
-          />
-        </div>
-      </div>
-
-      <div className=" mx-auto max-w-[1320px] px-4 relative z-10 min-h-[80vh]">
-
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
-          spaceBetween={0}
-          slidesPerView={1}
-          effect="fade"
-          fadeEffect={{ crossFade: true }}
-          navigation={{
-            prevEl: ".hero-button-prev",
-            nextEl: ".hero-button-next",
-          }}
-          pagination={{
-            clickable: true,
-            bulletClass: "hero-pagination-bullet",
-            bulletActiveClass: "hero-pagination-bullet-active",
-          }}
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          speed={1000}
-          className="hero-swiper"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={slide.id}>
-              <div className="h-fit flex items-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full pt-28">
-                  {/* Left Content */}
-                  <div className="space-y-8 order-2 lg:order-1 max-w-4xl mx-auto items-center text-center lg:items-start lg:text-left">
-                    {/* Badge with Animation */}
+    <section className="relative overflow-hidden">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        spaceBetween={0}
+        slidesPerView={1}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        navigation={{
+          prevEl: ".hero-button-prev",
+          nextEl: ".hero-button-next",
+        }}
+        pagination={{
+          clickable: true,
+          bulletClass: "hero-pagination-bullet",
+          bulletActiveClass: "hero-pagination-bullet-active",
+        }}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        speed={1000}
+        className="hero-swiper"
+      >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="relative min-h-screen">
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gray-900/35" />
+              
+              {/* Content */}
+              <div className="relative z-10 flex items-center min-h-screen">
+                <div className="container mx-auto px-4 py-24">
+                  <div className="max-w-[1170px] mx-auto text-center">
+                    {/* Badge */}
                     <div className="inline-flex items-center animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                      <span className="bg-blue-100 text-[#2974FF] px-6 py-3 rounded-full text-[16px] font-medium flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#2974FF] rounded-full animate-pulse" />
+                      <span className="bg-primary-1 text-primary-2 px-6 py-2.5 rounded-full text-sm font-medium tracking-wider flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary-2 rounded-full animate-pulse" />
                         {slide.badge}
                       </span>
                     </div>
 
-                    {/* Title with Animation */}
+                    {/* Title */}
                     <h1
-                      className="text-4xl lg:text-5xl xl:text-[90px] font-bold text-gray-900 leading-tighter animate-fade-in-up"
+                      className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-8 leading-tight animate-fade-in-up"
                       style={{ animationDelay: "0.4s" }}
                     >
                       {slide.title}
                     </h1>
 
-                    {/* Description with Animation */}
+                    {/* Divider */}
+                    <div 
+                      className="w-24 h-1 bg-primary-1 mx-auto my-6 animate-fade-in-up" 
+                      style={{ animationDelay: "0.5s" }}
+                    />
+
+                    {/* Description */}
                     <p
-                      className="text-gray-600 text-lg lg:text-xl leading-relaxed max-w-lg animate-fade-in-up"
+                      className="text-gray-100 text-lg md:text-xl max-w-xl mx-auto animate-fade-in-up"
                       style={{ animationDelay: "0.6s" }}
                     >
                       {slide.description}
                     </p>
 
-                    {/* Buttons with Animation */}
-                    <div className="flex items-center md:justify-center lg:justify-start gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-                      <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    {/* Buttons */}
+                    <div
+                      className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 animate-fade-in-up"
+                      style={{ animationDelay: "0.8s" }}
+                    >
+                      <button className="bg-primary-1 hover:bg-primary-2 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2">
                         {slide.buttonText}
+                        <MoveRight className="w-4 h-4" />
                       </button>
-                      <button className="w-16 h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
-                        <Play className="w-6 h-6 ml-1 group-hover:scale-110 transition-transform" fill="currentColor" />
+                      <button className="text-white hover:text-primary-1 font-medium flex items-center gap-2 group">
+                        <div className="w-10 h-10 rounded-full bg-primary-2/10 flex items-center justify-center group-hover:bg-primary-1 transition-colors">
+                          <Play className="w-4 h-4" fill="currentColor" />
+                        </div>
+                        Watch Overview
                       </button>
-                    </div>
-                  </div>
-
-
-                  {/* Right Image */}
-                  <div className="relative order-1 lg:order-2 hidden lg:block mx-auto">
-                    <div className="relative animate-fade-in-right" style={{ animationDelay: "0.3s" }}>
-                      <img
-                        src={slide.image || "/placeholder.svg"}
-                        alt={`Hero slide ${slide.id}`}
-                        className="transform transition-transform duration-700"
-                      />
                     </div>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              
+              {/* Financial Indicators */}
+              <div className="absolute bottom-12 left-0 right-0 z-10">
+                <div className="container mx-auto px-4">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    {['Taxation', 'Risk Management', 'Retirement', 'Wealth Growth'].map((item, index) => (
+                      <div 
+                        key={index}
+                        className="bg-primary-2/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 animate-fade-in-up"
+                        style={{ animationDelay: `${0.9 + index * 0.1}s` }}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-white font-medium">{item}</span>
+                          <button className="text-primary-1 hover:text-white transition-colors">
+                            <MoveRight className="w-5 h-5" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        {/* Custom Navigation Buttons */}
-      </div>
-      <div className="hidden xl:block">
-        <div className="absolute xl:right-[10%] top-1/2 right-[2%] transform -translate-y-1/2 z-20 flex flex-col gap-4 ">
-          <button className="hero-button-prev w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
-            <MoveRight className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
+      {/* Custom Navigation Buttons */}
+      <div className="hidden md:block">
+        <div className="absolute top-1/2 left-4 right-4 transform -translate-y-1/2 z-20 flex justify-between">
+          <button className="hero-button-prev w-12 h-12 bg-primary-2/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors">
+            <ChevronLeft className="w-6 h-6 text-white" />
           </button>
-          <button className="hero-button-next w-16 h-16 bg-white backdrop-blur-sm shadow-[0px_30px_70px_rgba(0,0,0,0.08)] rounded-full flex items-center justify-center hover:bg-[#2974FF] hover:scale-110 transition-all duration-300 group">
-            <MoveLeft className="w-5 h-5 text-black group-hover:text-white  transition-colors" />
+          <button className="hero-button-next w-12 h-12 bg-primary-2/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors">
+            <ChevronRight className="w-6 h-6 text-white" />
           </button>
         </div>
       </div>
 
-
       {/* Custom Styles */}
       <style jsx global>{`
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fade-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-
-        .animate-fade-in-right {
-          animation: fade-in-right 1s ease-out forwards;
-          opacity: 0;
-        }
-
-        .hero-swiper .swiper-pagination {
-          bottom: 40px !important;
-          left: 50% !important;
-          transform: translateX(-50%) !important;
-          width: auto !important;
-        }
         
-        .hero-pagination-bullet {
-          width: 12px !important;
-          height: 12px !important;
-          background: rgba(59, 130, 246, 0.3) !important;
-          opacity: 1 !important;
-          margin: 0 8px !important;
-          transition: all 0.3s ease !important;
-          cursor: pointer !important;
-        }
-        
-        .hero-pagination-bullet-active {
-          background: #3b82f6 !important;
-          transform: scale(1.3) !important;
-          box-shadow: 0 0 10px rgba(59, 130, 246, 0.5) !important;
-        }
-
-        .hero-swiper .swiper-slide {
-          height: auto !important;
-        }
-
-        .hero-swiper .swiper-slide-active .animate-fade-in-up,
-        .hero-swiper .swiper-slide-active .animate-fade-in-right {
-          animation-play-state: running;
-        }
       `}</style>
     </section>
-  )
-}
-export default HomeBanner
+  );
+};
+export default HomeBanner;
