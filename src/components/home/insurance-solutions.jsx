@@ -64,7 +64,7 @@ export default function InsuranceSolutions() {
                     {cardData.map((item, index) => (
                         <Card
                             key={index}
-                            className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-white" >
+                            className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-primary-2" >
                             {/* Background pattern */}
                             <div className="absolute inset-0 opacity-5">
                                 <div

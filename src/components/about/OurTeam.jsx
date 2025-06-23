@@ -33,14 +33,15 @@ export default function OurTeamSlider() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-start lg:items-start gap-10">
+        <div className=" max-w-[1170px] mx-auto justify-center flex flex-col lg:flex-row items-start gap-10">
           {/* Left Content */}
           <div className="lg:w-1/3 text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-1 mb-4">
-              Experienced Professionals
-            </h2>
-            <p className="text-para-5 text-sm sm:text-base">
-              Our team brings extensive industry knowledge and commitment to delivering outstanding results.
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-1 mb-4">Experienced Professionals</h2>
+            <p className="text-primary-5  text-sm sm:text-base">
+              Our team brings extensive industry knowledge, years of hands-on experience, and a strong commitment to
+              delivering outstanding results. We work closely with clients to understand their unique needs, offering
+              expert guidance, innovative solutions, and consistent support at every step to ensure success and
+              satisfaction.
             </p>
           </div>
 
@@ -49,22 +50,17 @@ export default function OurTeamSlider() {
             <Swiper
               modules={[Autoplay, Pagination]}
               spaceBetween={24}
-              slidesPerView={2}
-              pagination={{ clickable: true }}
+              slidesPerView={3}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               breakpoints={{
                 0: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
               }}
             >
               {teamMembers.map((member, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-[300px] mx-auto">
-                    <img
-                      src={member.img}
-                      alt={member.name}
-                      className="w-full h-[400px] object-cover object-top"
-                    />
+                  <div className="bg-primary-2 rounded-lg shadow-md overflow-hidden w-full max-w-[300px] mx-auto">
+                    <img src={member.img} alt={member.name} className="w-full h-[400px] object-cover object-top" />
                     <div className="p-4">
                       <h4 className="text-lg font-bold text-primary-1">{member.name}</h4>
                       <p className="text-primary-2 text-sm">{member.role}</p>

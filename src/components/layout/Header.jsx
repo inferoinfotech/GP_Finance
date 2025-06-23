@@ -1,35 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import SidebarModal from "../model/sidebar-modal";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(true);
-  };
+  const toggleSidebar = () => setIsSidebarOpen(true);
+  const closeSidebar = () => setIsSidebarOpen(false);
 
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      {/* Header */}
-      <header className="bg-primary-2 shadow-sm">
-        <div className="w-full max-w-container 2xl:px-8 xl:px-6 lg:px-5 md:px-4 sm:px-4 px-3 mx-auto">
-          <div className="flex items-center justify-between py-5">
+      <header
+        className={`sticky top-0 z-40 backdrop-blur transition-all duration-300 ${
+          scrolled ? "bg-primary-2/80 text-primary-3 shadow-md" : "bg-transparent text-primary-3"
+        }`}
+      >
+        <div className="w-full max-w-container 2xl:px-8 xl:px-6 lg:px-5 md:px-4 sm:px-4 px-3 mx-auto transition-all duration-300">
+          <div className="flex items-center justify-between py-2">
             {/* Logo */}
             <div className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt=""
-                className="w-25 h-25 object-contain rounded-full shadow-md border border-primary-1"
+                alt="Logo"
+                className="w-12 h-12 object-contain rounded-full shadow-md border border-primary-1"
               />
-              <span className="text-[36px] font-bold text-primary-3 tracking-wide">Financial Services</span>
+              <span
+                className={`text-[28px] font-bold tracking-wide transition-colors duration-300 ${
+                  scrolled ? "text-primary-1" : "text-primary-3"
+                }`}
+              >
+                Financial Services
+              </span>
             </div>
 
             {/* Navigation */}
@@ -40,28 +54,20 @@ export default function Header() {
                 { name: "Services", path: "/services" },
                 { name: "Contact", path: "/contact" },
               ].map((item, i) => (
-                <Link key={i} href={item.path} passHref>
-                  <span className="cursor-pointer font-medium text-[16px] text-primary-3 hover:text-primary-1 transition-colors">
-                    {item.name}
-                  </span>
+                <Link
+                  key={i}
+                  href={item.path}
+                  className={`cursor-pointer font-bold text-[16px] transition-colors duration-300 ${
+                    scrolled ? "text-primary-3" : "text-primary-3"
+                  }`}
+                >
+                  {item.name}
                 </Link>
               ))}
             </nav>
 
-            {/* Actions */}
-            <div className="flex items-center gap-5">
-              {/* Sidebar Trigger */}
-              <button onClick={toggleSidebar} className="p-2 border-l pl-6 border-primary-3" aria-label="Open menu">
-                <LayoutGrid className="w-8 h-8 text-primary-3" />
-              </button>
-
-              {/* Contact Button */}
-              <Link href="/contact">
-                <button className="bg-primary-1 hidden xl:block text-white px-8 py-3.5 rounded-full font-semibold transition-colors hover:bg-primary-3">
-                  Contact Now
-                </button>
-              </Link>
-            </div>
+            {/* Actions (optional) */}
+            <div className="flex items-center gap-5">{/* Future button/Sidebar trigger if needed */}</div>
           </div>
         </div>
       </header>
