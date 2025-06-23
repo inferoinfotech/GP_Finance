@@ -36,14 +36,14 @@ function Counter() {
                 key={index}
                 className="flex flex-col items-center justify-center text-center space-y-4"
               >
-                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gray-100 text-blue-600 text-4xl">
+                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary-2 text-primary-1 border border-primary-1 text-4xl">
                   <Icon />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">
+                  <h2 className="text-3xl font-bold text-primary-3">
                     <span className="counter">{item.count}</span>+
                   </h2>
-                  <h6 className="text-gray-600 font-normal">{item.title}</h6>
+                  <h6 className="text-small-color font-normal">{item.title}</h6>
                 </div>
               </div>
             );
