@@ -21,7 +21,7 @@ export default function Footer() {
             {/* Logo */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-[#2974FF] rounded-full flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary-2 rounded-full flex items-center justify-center">
                   <div className="w-4 h-4 bg-[#2974FF] rounded-full"></div>
                 </div>
               </div>

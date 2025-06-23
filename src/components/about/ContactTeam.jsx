@@ -16,7 +16,7 @@ function ContactTeam() {
       <div className="absolute inset-0 bg-gray-900/70 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 text-center px-4">
+      <div className="relative z-20 text-center px-4 max-w-[1170px]">
         <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold leading-snug max-w-3xl mx-auto">
           Manage your money <br />
           with more{" "}

@@ -2,7 +2,7 @@ import { Check, Shield } from "lucide-react"
 
 export default function AwardWinningSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-primary-2">
       <div className="container mx-auto max-w-[1320px] px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Image */}

@@ -9,8 +9,8 @@ function Page() {
 
       {/* Overview */}
       <div className="relative py-16 overflow-hidden">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row items-center">
+        <div className="container mx-auto px-4 max-w-[1170px]">
+          <div className="flex flex-col lg:flex-row items-center max-w-[1170px]">
             {/* Left Column */}
             <div className="w-full xxl:w-1/2 mb-10 lg:mb-0">
               <div className="relative flex items-start justify-start z-10">
@@ -45,7 +45,7 @@ function Page() {
                   <h2 className="text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42] xl:text-[50px] font-bold mt-2 mb-4 text-primary-3">
                     Discover Better Way to Plan for Your Family
                   </h2>
-                  <p className="text-para-5  max-w-lg text-[15px] md:[12px] lg:[16]">
+                  <p className="text-primary-5  max-w-lg text-[15px] md:[12px] lg:[16]">
                     Insure Family Safety refers to protecting the well-being and security of your loved ones through
                     various means. Our comprehensive planning solutions give you peace of mind for your family's future.
                   </p>

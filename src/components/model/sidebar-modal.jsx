@@ -60,7 +60,7 @@ export default function SidebarModal({ isOpen, onClose }) {
                                 {/* logo code */}
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                                        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                        <div className="w-8 h-8 bg-primary-2 rounded-full flex items-center justify-center">
                                             <div className="w-4 h-4 bg-blue-600 rounded-full" />
                                         </div>
                                     </div>
