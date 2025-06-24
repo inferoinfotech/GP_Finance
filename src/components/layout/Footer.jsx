@@ -1,4 +1,6 @@
-import { MapPin, Clock, Facebook, Twitter, Globe } from "lucide-react"
+import { MapPin, Clock, Mail, Phone } from "lucide-react";
+import React from "react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   const galleryImages = [
@@ -8,130 +10,206 @@ export default function Footer() {
     "/placeholder.svg?height=80&width=80",
     "/placeholder.svg?height=80&width=80",
     "/placeholder.svg?height=80&width=80",
-  ]
+  ];
 
-  const mainPages = ["Health Insurance", "Car Insurance", "Home Insurance", "Health Insurance", "Farm Insurance"]
+  const mainPages = [
+    "Health Insurance", 
+    "Car Insurance", 
+    "Home Insurance", 
+    "Life Insurance", 
+    "Business Insurance"
+  ];
+
+  const services = [
+    "Financial Planning",
+    "Investment Management",
+    "Retirement Solutions",
+    "Tax Optimization",
+    "Risk Assessment"
+  ];
 
   return (
-    <footer className="bg-[#1a1a1a] text-white py-16">
-      <div className="container mx-auto max-w-[1440px] px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Company Info Section */}
+    <footer className="relative pt-16 pb-8 overflow-hidden">
+      {/* Wave Background - Expanded to cover entire content */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <svg
+          className="w-full h-[180%]"
+          viewBox="0 0 1600 800"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="bg" x2="0%" y2="100%">
+              <stop offset="0%" style={{ stopColor: "rgba(180, 125, 5, 0.16)" }} />
+              <stop offset="100%" style={{ stopColor: "rgba(244, 244, 244, 0.06)" }} />
+            </linearGradient>
+            <path
+              id="wave"
+              fill="url(#bg)"
+              d="M-363.852,0 c0,0,236.988-41.997,505.475,0
+                s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v800H-363.852V0z"
+            />
+          </defs>
+          <g>
+            <use xlinkHref="#wave" opacity=".3">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="10s"
+                calcMode="spline"
+                values="270 0; -334 0; 270 0"
+                keyTimes="0; .5; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlinkHref="#wave" opacity=".6">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="8s"
+                calcMode="spline"
+                values="-270 0;243 0;-270 0"
+                keyTimes="0; .6; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+            <use xlinkHref="#wave" opacity=".9">
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                dur="6s"
+                calcMode="spline"
+                values="0 0;-140 0;0 0"
+                keyTimes="0; .4; 1"
+                keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                repeatCount="indefinite"
+              />
+            </use>
+          </g>
+        </svg>
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Company Info */}
           <div className="space-y-6">
-            {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-[#2974FF] rounded-full flex items-center justify-center">
-                <div className="w-8 h-8 bg-primary-2 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-[#2974FF] rounded-full"></div>
-                </div>
+              <div className="w-12 h-12 bg-primary-1 rounded-full flex items-center justify-center text-white">
+                <div className="text-xl font-bold">FS</div>
               </div>
-              <span className="text-2xl font-bold">Noxiy</span>
+              <span className="text-2xl font-bold text-primary-3">Financial Services</span>
             </div>
-
-            {/* Description */}
-            <p className="text-[#999999] text-[16px] leading-relaxed mt-[13px]">
-              Proin vitae massa neque. Sed eget urna lacinia, ultrices odio non,
+            <p className="text-primary-6 text-base leading-relaxed">
+              Providing expert financial guidance since 2003. We help individuals and businesses achieve their financial goals through personalized strategies.
             </p>
-
-            {/* Social Media */}
-            <div>
-              <h6 className="text-white font-medium text-[18px] mb-4">Follow Us :</h6>
-              <div className="flex gap-3">
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-6 h-6"/>
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors"
-                  aria-label="Website"
-                >
-                  <Globe className="w-6 h-6"/>
-                </a>
-              </div>
+            <div className="flex gap-3">
+              <a href="#" className="w-10 h-10 bg-primary-1/20 rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors text-primary-1 hover:text-white" aria-label="Facebook">
+                <FaFacebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-primary-1/20 rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors text-primary-1 hover:text-white" aria-label="Twitter">
+                <FaTwitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-primary-1/20 rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors text-primary-1 hover:text-white" aria-label="Instagram">
+                <FaInstagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 bg-primary-1/20 rounded-full flex items-center justify-center hover:bg-primary-1 transition-colors text-primary-1 hover:text-white" aria-label="LinkedIn">
+                <FaLinkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
-          {/* Main Pages Section */}
+          {/* Services */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Main Pages</h3>
+            <h3 className="text-xl font-semibold text-primary-3 mb-6">Our Services</h3>
             <ul className="space-y-3">
-              {mainPages.map((page, index) => (
+              {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#" className="text-[#999999] hover:text-white transition-colors text-[16px] flex items-center">
-                    <span className="w-2 h-2 bg-gray-600 rounded-full mr-3 flex-shrink-0"></span>
-                    {page}
+                  <a href="#" className="text-primary-6 hover:text-primary-1 transition-colors flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-primary-1 flex-shrink-0"></div>
+                    {service}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Official Info Section */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Official Info</h3>
-
-            {/* Address */}
-            <div className="flex items-start gap-3  border-b border-[#333334] pb-[18px] mb-[18px]">
-              <div className="w-10 h-10 text-[#2974FF] flex-shrink-0 mt-1 border rounded-full border-[#333334] flex items-center justify-center">
-                <MapPin className="w-5 h-5" />
+            <h3 className="text-xl font-semibold text-primary-3 mb-6">Contact Us</h3>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 bg-primary-1/10 rounded-full flex items-center justify-center text-primary-1 flex-shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <p className="text-primary-6">4140 Parker Rd. Allentown, New Mexico 31134</p>
               </div>
-              <p className="text-gray-400 text-[16px]">4140 Parker Rd. Allentown, New Mexico 31134</p>
-            </div>
-
-            {/* Working Hours */}
-            <div>
-              <div className="flex items-center gap-3 mb-3 ">
-                <div className="w-10 h-10 text-[#2974FF] border rounded-full border-[#333334] flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-1/10 rounded-full flex items-center justify-center text-primary-1 flex-shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <p className="text-primary-6">+1 (555) 123-4567</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-primary-1/10 rounded-full flex items-center justify-center text-primary-1 flex-shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <p className="text-primary-6">info@financialservices.com</p>
+              </div>
+              <div className="flex items-start gap-3 mt-6">
+                <div className="w-10 h-10 bg-primary-1/10 rounded-full flex items-center justify-center text-primary-1 flex-shrink-0">
                   <Clock className="w-5 h-5" />
                 </div>
-                <h4 className="text-white text-[18px] font-medium">Working Hours :</h4>
-              </div>
-              <div className="ml-9 space-y-1">
-                <p className="text-gray-400 text-[16px]">Monday - Friday 9: AM- 5: PM</p>
-                <p className="text-gray-400 text-[16px]">Sat - Sun Closed</p>
+                <div>
+                  <h4 className="text-primary-3 font-medium mb-1">Working Hours</h4>
+                  <p className="text-primary-6">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                  <p className="text-primary-6">Saturday - Sunday: Closed</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Gallery Section */}
+          {/* Newsletter */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Gallery</h3>
-            <div className="grid grid-cols-3 gap-2">
-              {galleryImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="aspect-square bg-gray-700 overflow-hidden hover:opacity-80 transition-opacity cursor-pointer"
-                >
-                  <img
-                    src={image || "/placeholder.svg"}
-                    alt={`Gallery image ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+            <h3 className="text-xl font-semibold text-primary-3 mb-6">Newsletter</h3>
+            <p className="text-primary-6 mb-4">
+              Subscribe to our newsletter for financial tips and market updates.
+            </p>
+            <form className="space-y-3">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                className="w-full px-4 py-3 rounded-lg bg-white/90 border border-primary-4 focus:outline-none focus:ring-2 focus:ring-primary-1"
+              />
+              <button 
+                type="submit" 
+                className="w-full bg-primary-1 text-white px-4 py-3 rounded-lg font-medium hover:bg-primary-2 transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
         </div>
 
-        {/* Copyright Section */}
-        <div className="border-t border-gray-800 mt-12 pt-6">
-          <p className="text-center text-gray-400 text-sm">
-            Copyright 2023 <span className="text-[#2974FF] font-medium">Noxiy</span> - All Rights Reserved By{" "}
-            <span className="text-[#2974FF] font-medium">ThemeOri</span>
+        {/* Divider */}
+        <div className="border-t border-primary-4/30 my-8"></div>
+
+        {/* Copyright */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-primary-6 text-sm text-center">
+            © {new Date().getFullYear()} Financial Services. All rights reserved.
           </p>
+          <div className="flex gap-6">
+            <a href="#" className="text-primary-6 hover:text-primary-1 text-sm">Privacy Policy</a>
+            <a href="#" className="text-primary-6 hover:text-primary-1 text-sm">Terms of Service</a>
+            <a href="#" className="text-primary-6 hover:text-primary-1 text-sm">Sitemap</a>
+          </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

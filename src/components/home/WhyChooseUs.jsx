@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
       <div className="container mx-auto px-4">
         <div className="max-w-[1170px] mx-auto text-center">
           {/* Section Header */}
-          <h2 className="text-3xl sm:text-4xl font-semibold text-primary-3 uppercase">Why Choose Us?</h2>
+          <h2 className="text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42] font-semibold text-primary-3 uppercase">Why Choose Us?</h2>
           <div className="w-16 h-[2px] bg-primary-1 mx-auto mt-4 mb-12" />
 
           {/* Grid Layout */}
@@ -48,8 +48,8 @@ export default function WhyChooseUs() {
                   <div className="w-12 h-12 flex items-center justify-center rounded border border-primary-1 text-primary-1">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h4 className="text-xl font-semibold text-primary-3">{title}</h4>
-                  <p className="text-sm text-primary-5 max-w-xs">{description}</p>
+                  <h3 className="text-[18px] font-semibold text-primary-3">{title}</h3>
+                  <p className="text-[15px] md:[12px] lg:[16] text-primary-5 max-w-xs">{description}</p>
                 </div>
               ))}
             </div>

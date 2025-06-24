@@ -15,7 +15,7 @@ function Page() {
       <ContactTeam />
       <WhyUs />
       <OurTeam />
-    </>
+    </> 
   );
 }
 

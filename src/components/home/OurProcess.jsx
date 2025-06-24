@@ -38,7 +38,7 @@ export default function OurProcess() {
     <section className="bg-primary-5 py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-[1170px] mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-primary-3 uppercase">Our Process</h2>
+          <h2 className="text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42] font-semibold text-primary-3 uppercase">Our Process</h2>
           <div className="w-16 h-[2px] bg-primary-1 mx-auto mt-4 mb-12" />
 
           <div className="relative  grid grid-cols-1 md:grid-cols-2 gap-y-16 before:hidden md:before:block before:absolute before:top-0 before:bottom-0 before:left-1/2 before:w-[1px] before:bg-gray-300">

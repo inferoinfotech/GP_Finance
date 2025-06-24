@@ -114,7 +114,7 @@ const HomeBanner = () => {
 
                     {/* Description */}
                     <p
-                      className="text-gray-100 text-lg md:text-xl max-w-xl mx-auto animate-fade-in-up"
+                      className="text-gray-100 text-[15px] md:[12px] lg:[16px] max-w-xl mx-auto animate-fade-in-up"
                       style={{ animationDelay: "0.6s" }}
                     >
                       {slide.description}

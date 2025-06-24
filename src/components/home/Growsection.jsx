@@ -15,11 +15,11 @@ export default function GrowBusinessSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-[1170px] mx-auto text-center">
           {/* Header */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary-3 uppercase tracking-wide">
+          <h2 className="text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42]  sm:text-4xl md:text-5xl font-semibold text-primary-3 uppercase tracking-wide">
             WE HELP YOU TO GROW YOUR BUSINESS
           </h2>
           <div className="w-16 h-[2px] bg-primary-1 mx-auto mt-4 mb-6"></div>
-          <p className="text-gray-500 max-w-3xl mx-auto text-sm md:text-base">
+          <p className="text-gray-500 max-w-3xl mx-auto text-[14px] md:text-[16px] md:text-base">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             Duis aute irure dolor in reprehenderit in voluptate.
           </p>

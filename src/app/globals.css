@@ -211,13 +211,9 @@
   max-width: 1560px !important;
 }
 
-.bg-primary {
-  background: #2974ff;
-}
-
 /* Home page  */
 
-/* -- banner  */
+/* -- Home/banner  */
 
 @keyframes fade-in-up {
   from {
@@ -295,7 +291,7 @@
   animation: upDown 3s ease-in-out infinite;
 }
 
-/* --Our team  */
+/* --About/Our team  */
 
 @keyframes scroll-x {
   0% {
