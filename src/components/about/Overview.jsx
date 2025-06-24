@@ -1,11 +1,9 @@
 import React from "react";
-import PageBanner from "../layout/PageBanner";
 import Link from "next/link";
 
 function Page() {
   return (
     <div>
-      <PageBanner title="About Us" />
 
       {/* Overview */}
       <div className="relative py-16 overflow-hidden">
